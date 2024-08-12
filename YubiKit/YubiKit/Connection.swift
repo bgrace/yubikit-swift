@@ -66,7 +66,7 @@ public protocol Connection: AnyObject {
     func send(data: Data) async throws -> Data
 }
 
-internal protocol InternalConnection {
+public protocol InternalConnection {
     func session() async -> Session?
     func setSession(_ session: Session?) async
 }

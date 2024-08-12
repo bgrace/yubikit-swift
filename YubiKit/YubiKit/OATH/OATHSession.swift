@@ -48,10 +48,10 @@ public enum OATHSessionError: Error {
 public final actor OATHSession: Session, InternalSession {
     
     private weak var _connection: Connection?
-    internal func connection() async -> Connection? {
+    public func connection() async -> Connection? {
         return _connection
     }
-    internal func setConnection(_ connection: Connection?) async {
+    public func setConnection(_ connection: Connection?) async {
         _connection = connection
     }
     

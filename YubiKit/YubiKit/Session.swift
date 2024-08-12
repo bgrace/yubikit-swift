@@ -33,7 +33,7 @@ public protocol Session: AnyObject {
     func end() async
 }
 
-internal protocol InternalSession {
+public protocol InternalSession {
     func connection() async -> Connection?
     func setConnection(_ connection: Connection?) async
 }

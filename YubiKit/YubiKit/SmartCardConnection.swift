@@ -29,10 +29,10 @@ public final actor SmartCardConnection: Connection, InternalConnection {
     }
     
     private weak var _session: Session?
-    func session() async -> Session? {
+    public func session() async -> Session? {
         return _session
     }
-    func setSession(_ session: Session?) async {
+    public func setSession(_ session: Session?) async {
         Logger.smartCard.debug("\(String(describing: self).lastComponent), \(#function): \(String(describing: session))")
         _session =  session
     }
